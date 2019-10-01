@@ -25,6 +25,7 @@
 
         <TextView
                 android:id="@+id/title"
+                style="@style/TextAppearance.Title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/about_google_developer_groups"
@@ -45,6 +46,7 @@
 
         <TextView
                 android:id="@+id/subtitle"
+                style="@style/TextAppearance.Subtitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/gdgs_are"
