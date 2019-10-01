@@ -2,7 +2,7 @@
           xmlns:tools="http://schemas.android.com/tools" package="com.example.android.gdgfinder">
 
     <!-- In order for our app to access the Internet, we need to define this permission. -->
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <!-- To access the location we need to ask for permission -->
     <!-- see https://developer.android.com/training/location/retrieve-current.html -->
@@ -22,6 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
     </application>
 
 </manifest>
