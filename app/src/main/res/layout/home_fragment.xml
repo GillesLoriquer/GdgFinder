@@ -35,9 +35,11 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintDimensionRatio="4:3"/>
 
+                <!--The syntax ?attr is a way to look up a theme attribute and apply the value
+                of Headline 5, as defined in the current theme.-->
                 <TextView
                         android:id="@+id/title"
-                        style="@style/TextAppearance.Title"
+                        android:textAppearance="?attr/textAppearanceHeadline5"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="@string/about_google_developer_groups"
@@ -56,9 +58,11 @@
                         android:text="@string/gdg_description_long"
                         android:layout_marginTop="8dp"/>
 
+                <!--Idem que pour Headline5, sauf qu'ici on a redéfini le style pour textAppearanceHeadline6 dans
+                 styles.xml -->
                 <TextView
                         android:id="@+id/subtitle"
-                        style="@style/TextAppearance.Subtitle"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:text="@string/gdgs_are"
