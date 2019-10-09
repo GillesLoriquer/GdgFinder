@@ -1,110 +1,78 @@
-# Desinging for Everyone - GDG Finder app
+# GdgFinder App
 
-This is the toy app for Lesson 10 of the [Android App Development in Kotlin course on Udacity](https://classroom.udacity.com/courses/ud9012/).
+Application permettant de récupérer les GDG worldwide. Il s'agit de la mise en pratique de la lesson 10 ["Designing for everyone"](https://classroom.udacity.com/courses/ud9012/) de Google (Udacity)
 
-## GDG Finder
+## Concepts mis en oeuvres
 
-GDGs, or Google Developer Groups, are communities of developers that focus on Google technologies - including Android - around the world. They host lots of different events like meetups, conferences, study jams, and more!
+* Google fonts
+* Gestion des styles
+* Material Design (FloatingActionButton, Theme attributes, theme overlay)
+* Support RTL
+* Implémentation des chips
+* Implémentation d'un dark theme (DayNight)
 
-GDG Finder helps you locate GDGs around the world or start one of your own. You'll learn the principles of Material Design so you can implement professional looking designs and build Android apps that users love to use!
+## Prérequis
 
- 
-## Screenshots
+* Android Studio
 
-![Screenshot1](screenshots/gdg-finder-home.png)
-![Screenshot2](screenshots/gdg-finder-search.png)
-![Screenshot3](screenshots/gdg-finder-apply.png)
+## Installation
 
-## How to use this repo while taking the course
+Télécharger le .zip du projet, extraire le contenu dans le répertoire de votre choix et ouvrir ce répertoire dans Android Studio.
 
+## Version SDK
 
-Each code repository in this class has a chain of commits that looks like this:
+* minSdkVersion 19
+* targetSdkVersion 28
 
-![listofcommits](https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58befe2e_listofcommits/listofcommits.png)
+## Dépendances
 
-These commits show every step you'll take to create the app. Each commit contains instructions for completing the that step.
+* Kotlin
+    org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.21
+    
+* Core with Ktx
+    androidx.core:core-ktx:1.0.1
 
-Each commit also has a **branch** associated with it of the same name as the commit message, as seen below:
+* Constraint Layout
+    androidx.constraintlayout:constraintlayout:2.0.0-alpha3
 
-![branches](https://d17h27t6h515a5.cloudfront.net/topher/2017/April/590390fe_branches-ud855/branches-ud855.png
-)
-Access all branches from this tab.
+* RecyclerView
+    * androidx.recyclerview:recyclerview:1.1.0-alpha03
 
-![listofbranches](https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58befe76_listofbranches/listofbranches.png
-)
+* ViewModel & LiveData
+    * androidx.lifecycle:lifecycle-extensions:2.0.0
+    * androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0-alpha03
+    
+* Navigation
+    * android.arch.navigation:navigation-fragment-ktx:1.0.0
+    * android.arch.navigation:navigation-ui-ktx:1.0.0
+    
+* Moshi
+    * com.squareup.moshi:moshi:1.8.0
+    * com.squareup.moshi:moshi-kotlin:1.8.0 
 
+* Retrofit
+    * com.squareup.retrofit2:retrofit:2.5.0
+    * com.squareup.retrofit2:converter-moshi:2.5.0
+    
+* Coroutines
+    * org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0
+    * org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.0 
 
-![branchesdropdown](https://d17h27t6h515a5.cloudfront.net/topher/2017/April/590391a3_branches-dropdown-ud855/branches-dropdown-ud855.png
-)
+* Retrofit Coroutines Support
+    * com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2
+    
+* Glide
+    * com.github.bumptech.glide:glide:4.8.0
 
-The branches are also accessible from the drop-down in the "Code" tab.
+* Material design components
+    * com.google.android.material:material:1.1.0-alpha04
 
+* Client for retrieving location
+    * com.google.android.gms:play-services-location:16.0.0
+    
+## Captures d'écran
+<img src="./screenshots/GdgFinder1.png" width="200">
 
-## Working with the Course Code
+<img src="./screenshots/GdgFinder2.png" width="200">
 
-Here are the basic steps for working with and completing exercises in the repo.
-
-The basic steps are:
-
-1. Clone the repo.
-2. Check out the branch corresponding to the step you want to attempt.
-3. Find and complete the TODOs.
-4. Optionally commit your code changes.
-5. Compare your code with the solution.
-6. Repeat steps 2-5 until you've gone trough all the steps to complete the toy app.
-
-
-**Step 1: Clone the repo**
-
-As you go through the course, you'll be instructed to clone the different exercise repositories, so you don't need to set these up now. You can clone a repository from github in a folder of your choice with the command:
-
-```bash
-git clone https://github.com/udacity/REPOSITORY_NAME.git
-```
-
-**Step 2: Check out the step branch**
-
-As you go through different steps in the code, you'll be told which step you're on, as well as a link to the corresponding branch.
-
-You'll want to check out the branch associated with that step. The command to check out a branch would be:
-
-```bash
-git checkout BRANCH_NAME
-```
-
-**Step 3: Find and complete the TODOs**
-
-Once you've checked out the branch, you'll have the code in the exact state you need. You'll even have TODOs, which are special comments that tell you all the steps you need to complete the exercise. You can easily navigate to all the TODOs using Android Studio's TODO tool. To open the TODO tool, click the button at the bottom of the screen that says TODO. This will display a list of all comments with TODO in the project. 
-
-We've numbered the TODO steps so you can do them in order:
-![todos](https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58bf00e7_todos/todos.png
-)
-
-**Step 4: Commit your code changes**
-
-After You've completed the TODOs, you can optionally commit your changes. This will allow you to see the code you wrote whenever you return to the branch. The following git code will add and save **all** your changes.
-
-```bash
-git add .
-git commit -m "Your commit message"
-```
-
-**Step 5: Compare with the solution**
-
-Most exercises will have a list of steps for you to check off in the classroom. Once you've checked these off, you'll see a pop up window with a link to the solution code. Note the **Diff** link:
-
-![solutionwindow](https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58bf00f9_solutionwindow/solutionwindow.png
-)
-
-The **Diff** link will take you to a Github diff as seen below:
-![diff](https://d17h27t6h515a5.cloudfront.net/topher/2017/March/58bf0108_diffsceenshot/diffsceenshot.png
-)
-
-All of the code that was added in the solution is in green, and the removed code (which will usually be the TODO comments) is in red. 
-
-You can also compare your code locally with the branch of the following step.
-
-## Report Issues
-Notice any issues with a repository? Please file a github issue in the repository.
-
-
+<img src="./screenshots/GdgFinder3.png" width="200">
